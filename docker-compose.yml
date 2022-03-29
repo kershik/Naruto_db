@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: python
+    build: .
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 5001:5000
+    env_file:
+      - ./.env
+    depends_on:
+      - db 
+ 
+  db:
+    container_name: postgres
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=kersh
+      - POSTGRES_PASSWORD=psswd
+      - POSTGRES_DB=naruto_db
