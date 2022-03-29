@@ -48,5 +48,6 @@ To add a story
 python add_story.py --name 'Наруто' --story 'Преподаватель в академии ниндзя'
 ```
 
-### Logging: file.log is for info (with logging filter on fights with winner 0), errors printed out on the console.
+### Logging
+file.log is for info (with logging filter on fights with winner 0), errors printed out on the console.
 
